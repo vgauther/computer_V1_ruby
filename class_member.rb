@@ -13,7 +13,7 @@ class Member
 		@exposant
 	end
 
-	def mutl
+	def mult
 		@mult
 	end
 
