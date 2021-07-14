@@ -3,7 +3,7 @@ def sqq(x)
 	ret
 end
 
-def rac(x)
+def olrac(x)
 	ret = 0.0
 	pl = 1.00
 	hello = 0
@@ -23,6 +23,21 @@ def rac(x)
 		end
 	end
 	ret
+end
+
+def rac(x)
+	prev = 0
+	k = 0
+	kmax = 1000
+	s = 1
+	for k in (0...kmax) do
+		prev = s
+		s = (s + x/s)/2
+		if(prev == s)
+			break
+		end
+	end
+	return s
 end
 
 def make_delta(a, b, c)

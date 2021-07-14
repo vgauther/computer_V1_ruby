@@ -63,13 +63,12 @@ def print_reduced(m, h_exp)
 		if m[s].mult && m[s].mult != 0
 			if m[s].sign == 1 && tok != 0
 				ss = " + "
-				tok = 1
 			elsif m[s].sign == -1 && tok != 0
 				ss = " - "
-				tok = 1
 			else
 				ss = ""
 			end
+			tok = 1
 			str = str + ss + stay_float(m[s].mult).to_s + " * X^" + m[s].exposant.to_s
 		end
 		s = s + 1
